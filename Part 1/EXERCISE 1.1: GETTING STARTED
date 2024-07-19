@@ -1,0 +1,28 @@
+PS C:\Users\Ivan López> docker run -d --name nginx1 nginx
+>> docker run -d --name nginx2 nginx
+>> docker run -d --name nginx3 nginx
+>>
+d986e0632d9c70f2475ce15c8b0c899b2e4096bf0cbdaa03ed4582472492c024
+e88c6e40c35751984c3af44923b5a46fd3d702acc021f28f2e910a1c019e9c4e
+8dd7ea1755db3207367468f8a90049da449985f5c139b169d520d13e14ecf0c2
+PS C:\Users\Ivan López> docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    fffffc90d343   2 weeks ago   188MB
+PS C:\Users\Ivan López> docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+8dd7ea1755db   nginx     "/docker-entrypoint.…"   14 seconds ago   Up 13 seconds   80/tcp    nginx3
+e88c6e40c357   nginx     "/docker-entrypoint.…"   14 seconds ago   Up 13 seconds   80/tcp    nginx2
+d986e0632d9c   nginx     "/docker-entrypoint.…"   15 seconds ago   Up 14 seconds   80/tcp    nginx1
+ddde355c988d   nginx     "/docker-entrypoint.…"   6 minutes ago    Up 6 minutes    80/tcp    youthful_neumann
+PS C:\Users\Ivan López>docker stop nginx1
+>> docker stop nginx2
+nginx1
+nginx2
+PS C:\Users\Ivan López> docker ps -a      
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                     PORTS     NAMES
+8dd7ea1755db   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute          80/tcp    nginx3
+e88c6e40c357   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 3 seconds ago             nginx2
+d986e0632d9c   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 4 seconds ago             nginx1
+PS C:\Users\Ivan López>^C
+PS C:\Users\Ivan López>^C
+PS C:\Users\Ivan López>
