@@ -1,0 +1,27 @@
+PS C:\Users\Ivan López> docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES
+8dd7ea1755db   nginx     "/docker-entrypoint.…"   4 minutes ago   Up 4 minutes               80/tcp    nginx3
+e88c6e40c357   nginx     "/docker-entrypoint.…"   4 minutes ago   Exited (0) 2 minutes ago             nginx2
+d986e0632d9c   nginx     "/docker-entrypoint.…"   4 minutes ago   Exited (0) 2 minutes ago             nginx1
+PS C:\Users\Ivan López> docker container rm 8dd e88 d98
+8dd
+e88
+d98
+PS C:\Users\Ivan López> docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    fffffc90d343   2 weeks ago   188MB
+PS C:\Users\Ivan López> docker image rm ffff
+Untagged: nginx:latest
+Untagged: nginx@sha256:67682bda769fae1ccf5183192b8daf37b64cae99c6c3302650f6f8bf5f0f95df
+Deleted: sha256:fffffc90d343cbcb01a5032edac86db5998c536cd0a366514121a45c6723765c
+Deleted: sha256:9f4b5d44149fd139616539e0ef5311a14338a970f25733ba95b4ae6d3becdf0d
+Deleted: sha256:8e6e10fbcca1bb180c5cfc805a37240945a6ba703cb1f985d4d3b8a1c954fc5b
+Deleted: sha256:dcec89b921d64a1d2f748c450832a4c5624219bbb1b696e1a606bff78b7afa60
+Deleted: sha256:4994a8d5939af297abf594b7ab714dfb72e57217b94bf0a250a62903cbdb6d84
+Deleted: sha256:8b2bc37f672b15bea06a204790da9f384ef7b06feccade3fd3b1945b63df5aef
+Deleted: sha256:a4197512070a01764db77b424100c1f81f0ed696380b19bc26b6e72fafef0709
+Deleted: sha256:32148f9f6c5aadfa167ee7b146b9703c59307049d68b090c19db019fd15c5406
+PS C:\Users\Ivan López> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\Users\Ivan López> docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
